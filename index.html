@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories Made Timeless</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-primary: #6C4B36;       /* Dark Mocha */
+      --color-text-dark: #3B2B22;     /* Charcoal Brown */
+      --color-bg-light: #F3E9E1;      /* Cream Beige */
+      --color-soft-neutral: #DCC2A2;  /* Warm Sand */
+      --color-accent: #A49484;        /* Warm Grey */
+      --color-light-neutral: #FFF9F5; /* Off-White */
+      --color-soft-taupe: #BFA58A;    /* Soft Taupe */
+    }
+
+    /* Soft fade-in up animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    /* Slide-in left animation */
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .slide-in-left {
+      opacity: 0;
+      animation: slideInLeft 1s ease forwards;
+    }
+
+    /* Slide-in right animation */
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .slide-in-right {
+      opacity: 0;
+      animation: slideInRight 1s ease forwards;
+    }
+  </style>
+</head>
+<body class="bg-[var(--color-bg-light)] text-[var(--color-text-dark)] font-sans">
+  <!-- Logo Section -->
+  <header class="bg-[var(--color-light-neutral)] py-6 flex justify-center fade-in-up">
+    <svg
+      class="h-16 md:h-24"
+      version="1.1"
+      id="svg1"
+      width="1412.3372"
+      height="1412.546"
+      viewBox="0 0 1412.3371 1412.546"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:svg="http://www.w3.org/2000/svg"><defs
+        id="defs1" /><g
+        id="g1"
+        transform="translate(-133.61155,-135.38074)"><path
+          style="display:inline;fill:#664d39;fill-opacity:1"
+          d="m 527.33336,1475.3449 c -89.13935,-44.0954 -160.02977,-99.3077 -226.41731,-176.343 -78.63767,-91.2501 -135.07977,-210.4892 -156.82586,-331.30903 -7.35915,-40.88692 -9.63413,-65.6472 -10.39039,-113.086 -5.88273,-369.01725 282.85112,-719.22613 706.30024,-719.22613 57.7276,0 70.37515,0.88675 114.64064,8.03778 582.93352,94.172 807.95652,848.03051 338.02602,1241.03478 -91.4493,76.4794 -202.9259,129.2469 -319.99999,151.4721 -93.98003,17.3909 -264.99029,28.6316 -445.33335,-60.5805 z m 614.66674,-8.5779 c 73.1228,-35.346 138.3432,-82.4076 195.3333,-140.948 53.2876,-54.7372 92.7764,-110.793 126.6743,-179.8189 C 1690.7574,684.27184 1344.5063,133.87017 824.00004,147.12175 354.88052,159.06507 106.56229,579.56956 150.73753,928.00004 c 16.94186,133.62836 69.95194,254.96856 157.28803,360.03286 17.76741,21.3739 63.88008,67.4902 85.23381,85.2405 46.42827,38.5933 91.78995,67.901 144.66644,93.4674 192.86173,93.2509 416.15369,90.863 604.07429,0.026 z M 819.33337,1147.9128 c -53.14546,-4.3081 -100.76111,-23.9116 -133.67686,-55.0351 -27.23218,-25.7494 -44.38135,-61.2752 -46.60427,-96.54432 l -0.77734,-12.33333 h 19.64643 19.64643 l -1.1172,-5.66667 c -1.77402,-8.99825 -1.00671,-33.928 1.4403,-46.79468 2.99067,-15.72535 10.26443,-37.65864 17.03186,-51.35786 6.48192,-13.12126 14.03679,-21.20599 28.20052,-30.17836 l 10.0002,-6.33489 -11.5617,-5.68126 c -23.3276,-11.46287 -44.37573,-29.733 -58.07003,-50.40574 -11.73834,-17.72006 -17.95862,-35.7766 -20.76546,-60.27897 -6.98195,-60.94921 14.5674,-113.65748 60.63219,-148.30222 20.55611,-15.45999 53.96788,-29.28747 84.80557,-35.09682 19.17464,-3.61222 62.15011,-4.98747 82.6381,-2.64451 35.23987,4.02997 66.26384,14.32045 90.74806,30.10063 41.98873,27.0619 66.83533,65.58915 73.71853,114.308 l 0.8947,6.33333 h -21.9267 -21.92667 l 3.47247,8.33334 c 3.10196,7.44418 3.4562,9.96936 3.32004,23.66667 -0.1874,18.8513 -2.88103,34.81397 -9.11227,54 -9.76224,30.058 -18.99986,44.11487 -36.32356,55.27355 -3.85,2.47989 -6.99934,4.85784 -6.99854,5.28434 8e-4,0.42649 4.6508,2.85963 10.33333,5.40696 14.76308,6.61792 31.57482,18.27558 43.9173,30.45335 19.0571,18.80265 29.359,36.24844 35.9779,60.92648 3.3504,12.49188 3.5769,15.14979 3.6341,42.65533 0.058,27.95135 -0.1113,29.96145 -3.5962,42.66665 -4.4095,16.076 -16.9207,41.8476 -26.4268,54.436 -9.1869,12.1657 -23.46948,25.9105 -37.22832,35.8266 -13.80565,9.9499 -41.77695,23.5836 -57.9461,28.244 -27.02783,7.7902 -65.03131,11.2499 -96.00001,8.7395 z m 61.33334,-67.9204 c 25.25537,-5.6504 42.55303,-15.1072 58.44342,-31.9519 15.78271,-16.7305 23.14838,-34.1959 24.47736,-58.04045 1.50434,-26.99097 -5.52788,-47.5425 -22.31491,-65.21488 -21.36075,-22.48731 -41.08163,-31.24721 -119.24221,-52.96664 -21.28335,-5.91427 -48.57031,-14.05959 -60.63768,-18.10071 l -21.94069,-7.34749 -3.11387,3.81486 c -22.5421,27.61672 -36.21203,47.36449 -40.94393,59.14819 -3.35734,8.36068 -4.1295,28.30038 -2.07719,53.63984 l 1.70302,21.02683 h 12.4646 c 11.87124,0 12.49129,0.14281 13.02525,3 3.11338,16.65935 6.00036,25.77615 11.88467,37.53025 5.77375,11.5332 8.56735,15.2982 19.50553,26.2879 10.97041,11.022 14.54877,13.6985 25.43329,19.0232 13.08534,6.4012 27.14915,10.5371 43.33334,12.7433 14.16758,1.9314 45.9106,0.5599 60,-2.5923 z m 69.23626,-260.36209 c 14.65198,-18.41954 25.02248,-34.15258 28.81366,-43.71306 3.78575,-9.54682 4.7776,-27.76749 2.72315,-50.0255 -0.87444,-9.47378 -1.64106,-20.97505 -1.7036,-25.55838 l -0.11371,-8.33334 h -14.21111 -14.21111 l -1.6348,-7.91494 c -5.17917,-25.07501 -27.884,-51.92305 -55.30592,-65.39819 -32.52853,-15.98454 -81.69334,-17.56227 -115.59283,-3.70945 -28.10751,11.48596 -47.26094,31.95487 -54.56506,58.31267 -9.01946,32.54781 -2.11153,64.60024 18.387,85.31477 20.81933,21.03871 39.55753,29.43495 113.5114,50.86236 20.16667,5.84309 45.96667,13.83879 57.33334,17.76822 11.36666,3.92944 21.56667,7.19258 22.66667,7.25144 1.1,0.0589 7.35631,-6.62661 13.90292,-14.8566 z"
+          id="path1" /><ellipse
+          style="display:none;fill:none;stroke:#664d39;stroke-width:10;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+          id="path2"
+          cx="840.00006"
+          cy="839.68451"
+          rx="693.98187"
+          ry="700.30377" /></g></svg>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-[var(--color-light-neutral)]">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col items-center text-center fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Carry Your Stories, Forever</h1>
+      <p class="text-lg md:text-xl mb-8 max-w-xl">At Stomless, we transform your cherished memories into timeless jewelry. Engrave images, quotes, and moments you hold dear, so they’re always with you.</p>
+      <a href="https://www.etsy.com/shop/storiesmadetimeless" target="_blank" class="bg-[var(--color-primary)] text-white px-8 py-3 rounded-lg transform transition-transform duration-300 hover:scale-105 hover:bg-[var(--color-soft-neutral)]">
+        Explore Our Etsy Shop
+      </a>
+    </div>
+    <img src="https://i.etsystatic.com/46167993/r/il/5db144/7351528541/il_1588xN.7351528541_th7c.jpg" alt="Joias" class="w-full object-cover h-80 md:h-96 mt-6 fade-in-up">
+  </section>
+
+  <!-- About / Brand Story -->
+  <section class="bg-[var(--color-light-neutral)] py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://i.etsystatic.com/46167993/r/il/44407e/7316771722/il_1588xN.7316771722_s154.jpg" alt="Making Jewelry" class="w-full rounded-lg shadow-lg slide-in-left">
+      <div class="slide-in-right">
+        <h2 class="text-3xl font-bold mb-4">Stories Made Timeless</h2>
+        <p class="text-[var(--color-accent)] mb-4">Every piece we craft at Stomless is a vessel for your memories. Whether it’s a cherished photo, a meaningful quote, or a moment that changed your life, we engrave it with care and dedication.</p>
+        <p class="text-[var(--color-accent)]">Our jewelry isn’t just adornment—it’s a way to carry your story with you, always.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="bg-[var(--color-soft-taupe)] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10 fade-in-up">Our Timeless Creations</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[var(--color-soft-neutral)] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105 fade-in-up">
+          <img src="https://i.etsystatic.com/46167993/r/il/bdb893/7365255235/il_1588xN.7365255235_2w3h.jpg" alt="Produto 1" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Pendant – Engraved Eyes</h3>
+            <a href="https://www.etsy.com/pt/listing/4392068803/colar-olhar-de-memoria?ref=shop_home_active_1&logging_key=afd1eaf61e7d2f04a60178d10bce861e68a8a276%3A4392068803" target="_blank" class="text-[var(--color-primary)] hover:text-[var(--color-accent)] transition">View on Etsy</a>
+          </div>
+        </div>
+        <div class="bg-[var(--color-soft-neutral)] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105 fade-in-up">
+          <img src="https://i.etsystatic.com/46167993/r/il/ea4641/7317110826/il_1588xN.7317110826_p1qz.jpg" alt="Produto 2" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Pendant – Couple Engraving</h3>
+            <a href="https://www.etsy.com/pt/listing/4392028168/colar-aura-eterna?ref=shop_home_active_5&logging_key=c2f39ccc55941b832f956d36dbdab5a748b3762a%3A4392028168" target="_blank" class="text-[var(--color-primary)] hover:text-[var(--color-accent)] transition">View on Etsy</a>
+          </div>
+        </div>
+        <div class="bg-[var(--color-soft-neutral)] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105 fade-in-up">
+          <img src="https://i.etsystatic.com/46167993/r/il/907d14/7303607154/il_1588xN.7303607154_5apk.jpg" alt="Produto 3" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105">
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Bracelet – Two Pets</h3>
+            <a href="https://www.etsy.com/pt/listing/4389773766/pulseira-companheira-eterna?ref=shop_home_active_8&logging_key=78bf60122e0384955a9bf4e50e93c2a2ac71ddad%3A4389773766" target="_blank" class="text-[var(--color-primary)] hover:text-[var(--color-accent)] transition">View on Etsy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Newsletter Signup -->
+  <section class="bg-[var(--color-bg-light)] py-20 fade-in-up">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Stay Connected</h2>
+      <p class="text-[var(--color-accent)] mb-6">Subscribe to our newsletter to discover new creations, exclusive offers, and ideas for keeping your memories close.</p>
+      <form class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" placeholder="Your email" class="px-4 py-3 rounded-lg border border-[var(--color-soft-taupe)] w-full sm:w-auto flex-1">
+        <button type="submit" class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg transform transition-transform duration-300 hover:scale-105 hover:bg-[var(--color-soft-neutral)]">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--color-light-neutral)] py-10 text-center text-[var(--color-accent)] fade-in-up">
+    <p>&copy; 2025 Stomless – Stories Made Timeless. Visit our <a href="https://www.etsy.com/shop/storiesmadetimeless" target="_blank" class="hover:text-[var(--color-primary)]">Etsy Shop</a> or follow us on <a href="https://www.instagram.com/storiesmadetimeless" target="_blank" class="hover:text-[var(--color-primary)]">Instagram</a> to see how memories become timeless.</p>
+  </footer>
+</body>
+</html>
